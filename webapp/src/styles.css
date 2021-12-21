@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+}
+#back_home_btn {
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--light-theme);
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--light-theme);
+    transition: all 0.3s;
+    position: relative;
+  
+    text-align: center;
+    overflow: hidden;
+  
+    border-radius: 5px;
+    box-shadow: 0 6px 30px -10px rgba(#CCCCCC, 1);
+}
+
+.divided-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    border-bottom: 3px solid lightblue;
+}
+
+.divided-row:hover {
+    background-color: var(--light-theme);
+    color: lightblue;
+}
