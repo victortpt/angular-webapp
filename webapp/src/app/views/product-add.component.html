@@ -1,0 +1,30 @@
+<div class="col-lg-offset-2">
+    <div>
+        <div class="row divided-row" align="center">
+            <h4>{{title}}</h4>
+        </div>
+        <div class="form row">
+            <div class="col-3"></div>
+                <form #formProduct="ngForm" (ngSubmit)="onSubmit()" class="col-6" id="formProductAdd">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" class="form-control" id="name" name="name" #name="ngModel" [(ngModel)]="product.name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descripción</label>
+                        <textarea type="text" class="form-control" id="description" name="description" #description="ngModel" [(ngModel)]="product.description" required></textarea>
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="price">Precio</label>
+                        <input type="number" class="form-control" id="price" name="price" #price="ngModel" [(ngModel)]="product.price" required>
+                    </div><br>
+                    <!--submit button-->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Añadir</button>
+                    </div>
+                </form>
+            <div class="col-3"></div>
+            
+        </div>
+    </div>
+</div>

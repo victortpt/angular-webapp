@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { Product } from '../models/product';
 
+
 @Component({
     selector: 'product-list',
     templateUrl: '../views/product-list.component.html',
@@ -10,8 +11,9 @@ import { Product } from '../models/product';
 })
 
 export class ProductListComponent implements OnInit {
+
     public title: string;
-    public products: Product[];
+    public products: Product[] = [];
 
     constructor(
         private _route: ActivatedRoute,
@@ -19,16 +21,13 @@ export class ProductListComponent implements OnInit {
         private _productService: ProductService
     ) {
         this.title = "Listado de productos";
-        this.products = [];
     }
 
     ngOnInit() { 
         this._productService.get_products().subscribe(
             response => {
                 console.log(response);
-            },
-            error => {
-                console.log(<any>error);
+                this.products = response;
             }
         );
 

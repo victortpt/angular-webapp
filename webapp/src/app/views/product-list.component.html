@@ -3,5 +3,27 @@
         <div class="row divided-row" align="center">
             <h2>{{title}}</h2>
         </div>
+
+        <div *ngIf="!products">
+            Cargando lista de productos
+        </div>
+        <div *ngIf="products">
+            <ul>
+                <li *ngFor="let product of products">
+                    <a [routerLink]="['/product', product.id]">{{product.name}}</a>
+                    <p>{{product.description}}</p>
+                    <p>{{product.price}} €</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" align="center">
+            <div class="col-lg-offset-1">
+                <div class="col-3">
+                    <a [routerLink]="['/product-add']" class="btn btn-lg btn-primary">Añadir productos</a>
+                </div>
+            </div>
+            
+        </div>
     </div>
 </div>
