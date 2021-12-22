@@ -1,0 +1,28 @@
+<div class="col-lg-offset-2">
+    <div>
+        <div class="row divided-row" align="center">
+            <h2>{{title}}</h2>
+        </div>
+        <div>
+            <div class="row" align="center">
+                <div class="col-lg-offset-1">
+                    <div class="col-3">
+                        <p>Nombre: {{product.name}}</p>
+                        <p>Descripción: {{product.description}}</p>
+                        <p>Precio: {{product.price}} €</p>
+                        <div class="row">
+                            <div class="col">
+                                <button [routerLink]="['/product-edit', product.id]" class="btn btn-primary">Editar</button>
+                            </div>
+                            <div class="col">
+                                <button  class="btn btn-danger">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
